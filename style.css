@@ -188,7 +188,23 @@ nav ul li a:hover::after{
     box-shadow:0 0 40px #ff3c3c;
     transition:.4s;
 }
+.hero-image img{
+    animation:float 4s ease-in-out infinite;
+}
 
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
 .hero-image img:hover{
     transform:scale(1.05);
 }
@@ -291,6 +307,9 @@ section h2::after{
     align-items:center;
     flex-wrap:wrap;
     margin-bottom:10px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
 }
 
 .experience-header h3{
@@ -309,6 +328,7 @@ section h2::after{
 
 .experience-card ul{
     padding-left:20px;
+    list-style:disc;
 }
 
 .experience-card ul li{
@@ -369,6 +389,7 @@ section h2::after{
 .project-card ul{
     margin-top:20px;
     padding-left:20px;
+    list-style:disc;
 }
 
 .project-card ul li{
@@ -426,6 +447,10 @@ form button{
     color:white;
     cursor:pointer;
 }
+form button:hover{
+    box-shadow:0 0 20px #ff3c3c;
+    transform:translateY(-3px);
+}
 
 /* ==========================
    FOOTER
@@ -481,7 +506,7 @@ footer{
     .show-menu{
         display:flex !important;
         flex-direction:column;
-        position:absolute;
+        position:fixed;
         top:80px;
         right:20px;
         width:220px;
